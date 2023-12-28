@@ -4,7 +4,7 @@ const ADDED_TEXT = "YES";
 const ADDING_TEXT = "WAIT";
 const REMOVING_TEXT = "WAIT";
 
-const GRAPHQL_ENDPOINT = "http://localhost:3001/graphql"
+const GRAPHQL_ENDPOINT = "https://truffle.tools/api/graphql"
 async function getProjRepoId(repoName) {
   const apikey = await chrome.storage.sync.get('apikey')
 
