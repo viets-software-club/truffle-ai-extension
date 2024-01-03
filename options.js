@@ -1,8 +1,9 @@
 const saveOptions = () => {
-  const key = document.getElementById('apikey').value;
+  const userApiKey = document.getElementById('userapikey').value;
+  const apiKey = document.getElementById('apikey').value;
 
   chrome.storage.sync.set(
-    { apikey: key},
+    { userApiKey, apiKey },
     () => {
       const status = document.getElementById('status');
       status.textContent = 'Options saved.';
@@ -15,9 +16,10 @@ const saveOptions = () => {
 
 const restoreOptions = () => {
   chrome.storage.sync.get(
-    'apikey',
+    ['apiKey', 'userApiKey'],
     (items) => {
-      document.getElementById('apikey').value = items.apikey;
+      document.getElementById('apikey').value = items.apiKey || "";
+      document.getElementById('userapikey').value = items.userApiKey || "";
     }
   );
 };

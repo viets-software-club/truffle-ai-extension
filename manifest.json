@@ -20,7 +20,7 @@
       "128": "images/icon-128.png"
     }
   },
-  "host_permissions": ["http://github.com/*", "https://github.com/*", "http://localhost:3001/*", "https://truffle.tools/api/graphql"],
+  "host_permissions": ["http://github.com/*", "https://github.com/*", "http://localhost:3001/*", "https://truffle.tools/api/graphql", "https://*.truffle.tools/api/graphql", "https://*.commit.truffle.tools/api/graphql"],
   "permissions": ["activeTab", "tabs", "scripting", "webRequest", "storage"],
   "options_page": "options.html",
   "commands": {
